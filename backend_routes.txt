@@ -1,0 +1,40 @@
+# Auth Routes
+POST /api/auth/google - Log in user using Google OAuth and return JWT
+GET /api/auth/me - Get currently logged in user's info (requires JWT)
+
+# User Routes
+GET /api/users - Get list of all users
+GET /api/users/:id - Get a specific user by ID
+PATCH /api/users/:id/avatar - Update user avatar URL
+
+# Team Routes
+POST /api/teams - Create a new team
+GET /api/teams - Get all teams
+GET /api/teams/:id - Get a specific team
+PATCH /api/teams/:id - Update team name/details
+DELETE /api/teams/:id - Delete a team
+
+# Project Routes
+POST /api/projects - Create a new project
+GET /api/projects - Get all projects
+GET /api/projects/:id - Get a specific project
+PATCH /api/projects/:id - Update project details
+DELETE /api/projects/:id - Delete a project
+
+# Task Routes
+POST /api/tasks - Create a new task
+GET /api/tasks - Get all tasks
+GET /api/tasks/:id - Get a specific task
+PATCH /api/tasks/:id - Update task details
+DELETE /api/tasks/:id - Delete a task
+
+# Whiteboard Routes
+POST /api/whiteboard/follow - Follow a user's cursor
+DELETE /api/whiteboard/unfollow - Unfollow a user
+GET /api/whiteboard/following - Get list of users currently followed
+
+# Presence & Cursor Sync (Socket.IO)
+SOCKET join_room - Join whiteboard room
+SOCKET cursor_move - Broadcast cursor movement
+SOCKET follow_user - Trigger follow update in real-time
+SOCKET unfollow_user - Stop showing cursor of unfollowed user

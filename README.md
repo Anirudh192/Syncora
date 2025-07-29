@@ -1,82 +1,155 @@
-SYNCORA
-SYNCORA is a modern, feature-rich React web application designed for seamless team collaboration. It empowers teams to manage projects, delegate tasks, work together in real-time with a collaborative whiteboard, and communicate through instant chat—all within a thoughtfully architected, easily customizable frontend.
+<h1 align="center">🚀 SYNCORA</h1>
+<p align="center">🧠 Real-Time Team Collaboration Platform built with React, Tailwind CSS, Zustand, and Socket.IO</p>
 
-✨ Features
-Project Management: Create, organize, and track projects with clarity.
+<p align="center">
+  <img src="https://img.shields.io/badge/status-in%20development-orange?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/react-18-blue?style=for-the-badge&logo=react" />
+  <img src="https://img.shields.io/badge/tailwindcss-3-38b2ac?style=for-the-badge&logo=tailwind-css" />
+  <img src="https://img.shields.io/badge/socket.io-live-black?style=for-the-badge&logo=socketdotio" />
+</p>
 
-Task Management: Assign, update, and monitor tasks to ensure project progress.
+---
 
-Team Management: Add, view, and manage team members and their roles.
+## 🌟 Overview
 
-Real-time Collaborative Whiteboard: Brainstorm and ideate together, visually and instantly.
+**SYNCORA** is a cutting-edge web app for **real-time team collaboration**. It combines project + task management with **live chat**, **whiteboarding**, and **team presence** — all packed into a sleek, responsive interface.
 
-Instant Chat: Communicate effortlessly with team members.
+Designed for speed, clarity, and scalability, SYNCORA is perfect for teams who work fast and communicate even faster.
 
-State Management with Zustand: Lightweight, scalable, and maintainable state logic.
+---
 
-Tailwind CSS for Styling: Consistent, customizable, and rapid UI development.
+## 🎯 Features
 
-Preserved Backend Integrations: All backend logic and API communication are properly abstracted, supporting seamless UI redesign.
+### 📁 Project & Task Management
+- ✅ Create & manage projects
+- ✅ Add, assign & update tasks
+- ✅ Real-time task updates
 
-🏗️ Architecture
-Frontend: React (functional components, hooks)
+### 🧑‍🤝‍🧑 Team & User Management
+- 🏗 Create & join teams
+- 👥 Role-based access: Owner, Admin, Member
+- 📩 Invite users via email
 
-State Management: Zustand
+### 🧑‍🎨 Real-Time Whiteboard
+- 🎨 Built with **Excalidraw**
+- 🔄 Live sync with other users
+- 🧲 Follow users’ cursors with a click
 
-Styling: Tailwind CSS
+### 💬 Real-Time Chat
+- ⚡ Instant messaging via **Socket.IO**
+- 👀 Online/offline presence
+- 🔔 Typing indicators
 
-Realtime Features: (WebSockets/your preferred method here)
+### 🧭 Clean & Modular Frontend
+- ✨ Built with **React + Vite**
+- 🎨 Styled using **Tailwind CSS**
+- 🧠 Managed by **Zustand**
+- 🧩 Modular structure for quick UI redesign
 
-Backend: Abstracted via API integrations (details hidden from this repo)
+---
 
-The frontend code is organized for clear separation of concerns, supporting rapid UI/UX iterations without affecting core data flows or backend connectivity.
+## 🧱 Tech Stack
 
-🚀 Getting Started
-Prerequisites
-Node.js (v18 or newer recommended)
+| Category       | Tools / Frameworks                               |
+|----------------|--------------------------------------------------|
+| 💻 Frontend     | React, Vite, Tailwind CSS, Zustand               |
+| 🧠 State Mgmt   | Zustand (lightweight & scalable)                |
+| 🔙 Backend      | Node.js, Express, REST APIs                      |
+| 🧩 Auth         | JWT (with secure HTTP-only cookies)              |
+| ⚡ Realtime     | Socket.IO, Excalidraw                            |
+| 🛢️ Database     | PostgreSQL, Prisma ORM                           |
 
-Yarn or npm
+---
 
-Installation
-bash
-git clone https://github.com/your-org/syncora.git
+## 🛠️ Getting Started
+
+### ✅ Prerequisites
+- Node.js (v18+)
+- PostgreSQL (with schema setup)
+- `.env` file with secrets (API keys, DB connection)
+
+### 🧪 Local Setup
+
+```bash
+# 1. Clone the repo
+git clone https://github.com/your-username/syncora.git
 cd syncora
+
+# 2. Install dependencies
 npm install
-# or
-yarn install
-Running the App
-bash
-npm start
-# or
-yarn start
-Visit http://localhost:3000 to view SYNCORA in your browser.
 
-Building for Production
-bash
-npm run build
-# or
-yarn build
-🧩 Project Structure
-text
-src/
-  components/       # Reusable UI components
-  features/         # Project, Task, Team, Whiteboard, Chat modules
-  state/            # Zustand stores
-  api/              # API request logic
-  styles/           # Tailwind configuration/custom styles
-  App.jsx           # Main application entry point
-  index.js
-🎨 Customization
-UI Redesign: Components and styles are modular and well-documented, enabling rapid prototyping and redesign with minimal effort.
+# 3. Start the development server
+npm run dev
+```
 
-Theming: Easily update Tailwind config for custom color schemes and typography.
+---
 
-State: Extend functionality with new Zustand stores or selectors as needed.
+## 🗂️ Project Structure
 
-🤝 Contributing
-Contributions are welcome! Please open issues or submit pull requests for improvements, bug fixes, or new features.
+```
+syncora/
+├── src/
+│   ├── api/             # Axios-based API calls
+│   ├── assets/          # Images, icons, etc.
+│   ├── components/      # Reusable UI components
+│   ├── features/        # Task, project, chat modules
+│   ├── pages/           # Page-level components (routes)
+│   ├── store/           # Zustand stores
+│   └── utils/           # Helper functions
+└── App.tsx              # Root component
+```
 
-📄 License
-This project is licensed under the MIT License.
+---
 
-SYNCORA — Power your team with clarity, creativity, and real-time collaboration!
+## ✅ Status
+
+- 🔐 Auth system (JWT + secure cookies) — DONE  
+- 🧠 Zustand-powered global state — DONE  
+- 🎨 Real-time collaborative whiteboard — DONE  
+- 💬 Live chat + presence system — DONE  
+- 🧼 Clean UI structure for redesign — IN PROGRESS  
+
+---
+
+## 📸 Screenshots
+
+> UI screenshots coming soon! Stay tuned 👀
+
+---
+
+## 🔮 Roadmap
+
+- ✅ Backend integration complete
+- 🔄 Add animations for better UX
+- 📱 Add mobile responsiveness (MVP+)
+- 🧪 Add unit & integration testing
+- 🌍 Multi-language support (planned)
+
+---
+
+## 🤝 Contributing
+
+Pull requests are welcome!  
+Want to add a feature or fix a bug? Fork the repo, create a branch, and submit a PR 🚀
+
+---
+
+## 📝 License
+
+This project is licensed under the [MIT License](LICENSE).
+
+---
+
+## ✨ Credits
+
+- [Excalidraw](https://excalidraw.com/)
+- [Zustand](https://github.com/pmndrs/zustand)
+- [Socket.IO](https://socket.io/)
+- [Tailwind CSS](https://tailwindcss.com/)
+
+---
+
+## 💡 Inspiration
+
+SYNCORA was built to answer one question:  
+> _"What if Trello, Miro, and Notion had a real-time baby?"_
